@@ -1,0 +1,23 @@
+def main():
+    matriz = [[0 for x in range(3)] for y in range(3)]
+    soma_diagonal = 0
+
+    for i in range(len(matriz)):
+        for j in range(len(matriz[i])):
+            matriz[i][j] = int(input("Elemento na linha [%d] e coluna [%d]: " % (i, j)))
+
+    print("\nValores na matriz:\n");
+
+    for i in range(len(matriz)):
+        for j in range(len(matriz[i])):
+            print("%5d  " % matriz[i][j], end=' ')
+        print()
+
+    for i in range(len(matriz)):
+        for j in range(len(matriz[i])):
+            if (i == j):
+                soma_diagonal = soma_diagonal + matriz[i][j]
+
+    print("\nA soma dos elementos da diagonal principal é: {0}".format(soma_diagonal))
+
+main()
