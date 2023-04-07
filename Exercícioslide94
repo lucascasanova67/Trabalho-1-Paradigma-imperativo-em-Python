@@ -1,0 +1,21 @@
+Exercício:
+Vamos escrever um programa que, dado um valor de ângulo, fornecido pelo usuário, escreva na tela o quadrante do ciclo triogonométrico em que ele se encontra.
+
+def main():
+    angulo = int(input('Ângulo: '))
+    quadrante = verificar_quad(angulo)
+    print(f'O ângulo {angulo} está no {quadrante} quandrante')
+
+
+def verificar_quad(angulo):
+    if angulo <= 90:
+        return 'Primeiro'
+    elif angulo <= 180:
+        return 'Segundo'
+    elif angulo <= 270:
+        return 'Terceiro'
+    else:
+        return 'Quarto'
+
+
+main()
