@@ -1,0 +1,9 @@
+primeiro = int(input("Digite o termo inicial: "))
+razao = int(input("Digite a razão da progressão aritmética:"))
+soma = 0
+ultimo = primeiro + (100 - 1)*razao
+ultimo = ultimo + 1
+
+for var in range (primeiro, 100, razao):
+    soma += var
+print("Soma de todos os termos: ", soma )
